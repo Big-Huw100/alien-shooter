@@ -22,6 +22,12 @@ function () {
       var getAlienCard = "\n        <article class =\"alien-card\">\n            <h2 class =\"alien-card__name\">".concat(this.name, "</h2>\n            <img class=\"alien-card__img\" src=").concat(this.img, " />\n            <p class=\"alien-card__hp\">").concat(this.hp, "</p>\n        </article>\n        ");
       return getAlienCard;
     }
+  }, {
+    key: "getDeadAlienCard",
+    value: function getDeadAlienCard() {
+      var getDeadAlienCard = "\n        <article class =\"alien-card\">\n        </article>\n        ";
+      return getDeadAlienCard;
+    }
   }]);
 
   return Alien;
@@ -40,5 +46,10 @@ alienContainer.innerHTML = atkShip.getAlienCard(); // Gameplay
 
 alienContainer.addEventListener("click", function () {
   atkShip.hp = atkShip.hp - 12;
-  alienContainer.innerHTML = atkShip.getAlienCard();
+
+  if (atkShip.hp > 0) {
+    alienContainer.innerHTML = atkShip.getAlienCard();
+  } else {
+    alienContainer.innerHTML = "";
+  }
 });

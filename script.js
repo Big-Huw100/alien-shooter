@@ -17,6 +17,14 @@ class Alien {
         `;
         return getAlienCard;
     }
+
+    getDeadAlienCard() {
+        const getDeadAlienCard = `
+        <article class ="alien-card">
+        </article>
+        `;
+        return getDeadAlienCard;
+    }
 };
 
 // Elements
@@ -39,5 +47,9 @@ alienContainer.innerHTML = atkShip.getAlienCard();
 
 alienContainer.addEventListener("click", () => {
     atkShip.hp = atkShip.hp - 12;
-    alienContainer.innerHTML = atkShip.getAlienCard();
+    if (atkShip.hp > 0) {
+        alienContainer.innerHTML = atkShip.getAlienCard();
+    } else {
+        alienContainer.innerHTML = "";
+    }
 });
