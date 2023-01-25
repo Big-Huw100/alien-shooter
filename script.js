@@ -18,3 +18,17 @@ class Alien {
         return getAlienCard;
     }
 };
+
+// Elements
+
+const alienContainer = document.querySelector(".alien-container");
+
+// Aliens
+
+const atkShip = new Alien("Zekvel", "./images/attack-ship.png", 45);
+const defShip = new Alien("Ungan", "./images/defense-ship.png", 80);
+const motherShip = new Alien("Zoneth", "./images/mother-ship.png", 100);
+
+// Display Aliens
+
+alienContainer.innerHTML = atkShip.getAlienCard();

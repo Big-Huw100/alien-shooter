@@ -27,4 +27,12 @@ function () {
   return Alien;
 }();
 
-;
+; // Elements
+
+var alienContainer = document.querySelector(".alien-container"); // Aliens
+
+var atkShip = new Alien("Zekvel", "./images/attack-ship.png", 45);
+var defShip = new Alien("Ungan", "./images/defense-ship.png", 80);
+var motherShip = new Alien("Zoneth", "./images/mother-ship.png", 100); // Display Aliens
+
+alienContainer.innerHTML = atkShip.getAlienCard();
