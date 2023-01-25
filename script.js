@@ -17,14 +17,6 @@ class Alien {
         `;
         return getAlienCard;
     }
-
-    getDeadAlienCard() {
-        const getDeadAlienCard = `
-        <article class ="alien-card">
-        </article>
-        `;
-        return getDeadAlienCard;
-    }
 };
 
 // Elements
