@@ -35,4 +35,10 @@ var atkShip = new Alien("Zekvel", "./images/attack-ship.png", 45);
 var defShip = new Alien("Ungan", "./images/defense-ship.png", 80);
 var motherShip = new Alien("Zoneth", "./images/mother-ship.png", 100); // Display Aliens
 
-alienContainer.innerHTML = atkShip.getAlienCard();
+alienContainer.innerHTML = atkShip.getAlienCard(); // Gameplay
+// click on an alien ship, it looses health
+
+alienContainer.addEventListener("click", function () {
+  atkShip.hp = atkShip.hp - 12;
+  alienContainer.innerHTML = atkShip.getAlienCard();
+});

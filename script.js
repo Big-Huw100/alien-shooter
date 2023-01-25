@@ -32,3 +32,12 @@ const motherShip = new Alien("Zoneth", "./images/mother-ship.png", 100);
 // Display Aliens
 
 alienContainer.innerHTML = atkShip.getAlienCard();
+
+// Gameplay
+
+// click on an alien ship, it looses health
+
+alienContainer.addEventListener("click", () => {
+    atkShip.hp = atkShip.hp - 12;
+    alienContainer.innerHTML = atkShip.getAlienCard();
+});
