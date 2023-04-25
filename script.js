@@ -10,9 +10,7 @@ class Alien {
     getAlienCard() {
         const getAlienCard = `
         <article class ="alien-card">
-            <h2 class ="alien-card__name">${this.name}</h2>
             <img class="alien-card__img" src=${this.img} />
-            <p class="alien-card__hp">${this.hp}</p>
         </article>
         `;
         return getAlienCard;
@@ -75,4 +73,3 @@ for (let i = 0; i < motherAlienContainers.length; i++) {
         }
     });
 }
-

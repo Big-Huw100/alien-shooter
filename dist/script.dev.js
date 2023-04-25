@@ -19,7 +19,7 @@ function () {
   _createClass(Alien, [{
     key: "getAlienCard",
     value: function getAlienCard() {
-      var getAlienCard = "\n        <article class =\"alien-card\">\n            <h2 class =\"alien-card__name\">".concat(this.name, "</h2>\n            <img class=\"alien-card__img\" src=").concat(this.img, " />\n            <p class=\"alien-card__hp\">").concat(this.hp, "</p>\n        </article>\n        ");
+      var getAlienCard = "\n        <article class =\"alien-card\">\n            <img class=\"alien-card__img\" src=".concat(this.img, " />\n        </article>\n        ");
       return getAlienCard;
     }
   }]);

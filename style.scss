@@ -1,3 +1,42 @@
-.alien-card__img {
-    height: 150px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 90px;
+}
+
+#atk-alien-zone {
+    display: flex;
+    justify-content: space-around;
+}
+
+#def-alien-zone {
+    display: flex;
+    justify-content: space-around;
+}
+
+#mother-alien-zone {
+    display: flex;
+    justify-content: center;
+}
+
+.alien-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+
+    .alien-card__img {
+        height: 110px;
+    }
 }
